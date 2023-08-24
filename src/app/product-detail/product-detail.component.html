@@ -1,1 +1,19 @@
-<p>product-detail works!</p>
+<div class="thumbnail">
+    <img src="https://placehold.co/820x320">
+    <div>
+      <h4 class="float-right">{{ product?.price }}</h4>
+      <h4>{{ product?.title }}</h4>
+      <p>{{ product?.description }}</p>
+    </div>
+    <p-rating [(ngModel)]="product!.rating" [stars]="5">
+        <ng-template pTemplate="cancel">
+            <img src="https://primefaces.org/cdn/primeng/images/demo/rating/cancel.png" width="25px" height="25px" />
+        </ng-template>
+        <ng-template pTemplate="onicon">
+            <img src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon-active.png" width="25px" height="25px" />
+        </ng-template>
+        <ng-template pTemplate="officon">
+            <img src="https://primefaces.org/cdn/primeng/images/demo/rating/custom-icon.png" width="25px" height="25px" />
+        </ng-template>
+    </p-rating>
+  </div>

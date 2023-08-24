@@ -4,5 +4,7 @@
   </div>
 </div>
 <div class="row">
-  <p>We will be rending components here</p>
+  <div *ngFor="let product of products" class="col-sm-4 col-lg-4 col-md-4">
+    <ng-product-item [product]="product"></ng-product-item>
+  </div>
 </div>

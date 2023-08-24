@@ -12,6 +12,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { RatingModule } from 'primeng/rating';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    RatingModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [{provide : LocationStrategy, useClass : HashLocationStrategy}],
   bootstrap: [AppComponent]
