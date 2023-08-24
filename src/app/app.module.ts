@@ -12,8 +12,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { RatingModule } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
+import { AuctionMaterialModule } from './auction-material/auction-material.module';
 
 @NgModule({
   declarations: [
@@ -29,9 +29,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RatingModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AuctionMaterialModule
   ],
   providers: [{provide : LocationStrategy, useClass : HashLocationStrategy}],
   bootstrap: [AppComponent]
