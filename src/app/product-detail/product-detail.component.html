@@ -1,8 +1,11 @@
-<div class="thumbnail">
-    <img src="https://placehold.co/820x320">
-    <div>
-      <h4 class="float-right">{{ product?.price }}</h4>
-      <h4>{{ product?.title }}</h4>
-      <p>{{ product?.description }}</p>
-    </div>
-  </div>
+<div class="thumbnail mt-4">
+  <mat-card>
+    <img mat-card-image src="https://placehold.co/820x320">
+    <h4 class="float-right">{{ product?.price | currency }}</h4>
+    <mat-card-title>{{ product?.title }}</mat-card-title>
+    <mat-card-content>
+      {{ product?.description }}
+    </mat-card-content>
+  </mat-card>
+</div>
+

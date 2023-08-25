@@ -1,0 +1,5 @@
+mat-card-title {
+    overflow-y: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

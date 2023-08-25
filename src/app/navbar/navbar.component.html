@@ -1,43 +1,21 @@
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="['/']">Ng Auction</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About us</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Services
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Find Products</a></li>
-            <li><a class="dropdown-item" href="#">Place order</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Pay</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<mat-toolbar color="primary">
+  <a [routerLink]="['/']" style="color: white;">ngAuction</a>
+  <div class="fill"></div>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>info</mat-icon>
+    <span>About</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>settings</mat-icon>
+    <span>Services</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>contacts</mat-icon>
+    <span>Contact</span>
+  </button>
+</mat-menu>

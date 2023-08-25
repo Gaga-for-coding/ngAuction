@@ -1,8 +1,13 @@
-<div class="thumbnail">
-    <img src="https://placehold.co/300x300">
-    <div class="caption">
-      <h4 class="float-right">{{ product.price | currency }}</h4>
-      <h4><a [routerLink]="['/product', product.id]">{{ product.title }}</a></h4>
-      <p>{{ product.description }}</p>
-    </div>
+<div class="m-4">
+  <mat-card>
+    <mat-card-title>{{ product.title }}</mat-card-title>
+    <img mat-card-image src="https://placehold.co/300x300">
+    <mat-card-content>
+      {{ product.description }}
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-button color="accent" [routerLink]="['/product', product.id]">VIEW</a>
+    </mat-card-actions>
+  </mat-card>
 </div>
+

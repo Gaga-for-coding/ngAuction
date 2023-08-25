@@ -1,0 +1,7 @@
+a {
+    text-decoration: none; /* Remove the underline */
+}
+
+.fill {
+    flex: 1;
+}
